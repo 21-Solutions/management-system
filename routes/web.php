@@ -4,11 +4,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\PagesController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::get('/',                     [PagesController::class,'welcome'])->name('welcome');
+Route::get('/about', [PagesController::class, 'about'])->name('about');
+Route::get('/dashboard', [PagesController::class, 'dashboard'])->name('dashboard');
 
 
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
@@ -18,3 +18,9 @@ Route::post('/password/email', [ForgotPasswordController::class, 'sendResetLinkE
 
 Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
 Route::post('/register', [RegisterController::class, 'register']);
+
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard')->middleware('auth');
+
+
+
+
