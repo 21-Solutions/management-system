@@ -19,8 +19,8 @@ Route::post('/password/email', [ForgotPasswordController::class, 'sendResetLinkE
 Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
 Route::post('/register', [RegisterController::class, 'register']);
 
-Route::get('/dashboard', 'DashboardController@index')->name('dashboard')->middleware('auth');
-
-
-
+//Route::get('/dashboard', 'DashboardController@index')->name('dashboard')->middleware('auth');
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+Route::get('/dashboard/upload', 'DashboardController@uploadForm')->name('upload.form');
+Route::post('/dashboard/upload', 'DashboardController@upload')->name('upload.submit');
 
