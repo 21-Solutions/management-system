@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\DashboardController;
 
 Route::get('/',                     [PagesController::class,'welcome'])->name('welcome');
 Route::get('/about', [PagesController::class, 'about'])->name('about');
