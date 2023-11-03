@@ -11,14 +11,21 @@
             padding: 0;
         }
         .container {
-            display: flex;
-            min-height: 100%;
-        }
-        .sidebar {
-            width: 200px;
-            background-color: #f1f1f1;
-            padding: 20px;
-        }
+    display: flex;
+    min-height: 100%;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+}
         .sidebar h2 {
             margin-bottom: 20px;
             color: #333;
@@ -106,36 +113,40 @@
                 </div>
                 <input type="file" id="avatar-input" accept="image/*">
                 <label for="avatar-input" class="change-picture-link">Change Picture</label>
-                <h2>User Name</h2>
+                <h3>Linda Takuva</h3>
             </div>
-            <a href="/app/student/attendance">
+            <a href="{{ route('attendance') }}">
                 <i class="fas fa-calendar-check" style="margin-right: 10px;"></i>
                 <span class="sidebar-link-text">Attendance</span>
             </a>
-            <a href="/app/student/timetable">
+            <a href="{{ route('timetable') }}">
                 <i class="far fa-clock" style="margin-right: 10px;"></i>
                 <span class="sidebar-link-text">Timetable</span>
             </a>
-            <a href="/app/student/subjects">
+            <a href="{{ route('subjects') }}">
                 <i class="fas fa-book-open" style="margin-right: 10px;"></i>
                 <span class="sidebar-link-text">Subjects</span>
             </a>
-            <a href="/app/student/extra-activities">
+            <a href="{{ route('activities') }}">
                 <i class="fas fa-globe" style="margin-right: 10px;"></i>
                 <span class="sidebar-link-text">Extra Activities</span>
             </a>
-            <a href="/app/student/overal-reports">
+            <a href="{{ route('overal') }}">
                 <i class="fas fa-file-alt" style="margin-right: 10px;"></i>
                 <span class="sidebar-link-text">Overall Reports</span>
             </a>
-            <a href="/app/student/timed-reports">
+            <a href="{{ route('timed') }}">
                 <i class="far fa-clock" style="margin-right: 10px;"></i>
                 <span class="sidebar-link-text">Timed Reports</span>
             </a>
-            <a href="/app/student/logout">
+            <a href="{{ route('welcome') }}">
                 <i class="fas fa-sign-out-alt" style="margin-right: 10px;"></i>
                 <span class="sidebar-link-text">Logout</span>
             </a>
+        </div>
+
+        <div class="content">
+            @yield('content')
         </div>
     </div>
 

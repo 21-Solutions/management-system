@@ -11,6 +11,13 @@ Route::get('/',                     [PagesController::class,'welcome'])->name('w
 Route::get('/about', [PagesController::class, 'about'])->name('about');
 Route::get('/dashboard', [PagesController::class, 'dashboard'])->name('dashboard');
 
+//Route::get('/attendance', [DashboardController::class, 'attendance'])->name('attendance');
+Route::get('/timetable', [DashboardController::class, 'timetable'])->name('timetable');
+Route::get('/subjects', [DashboardController::class, 'subjects'])->name('subjects');
+Route::get('/activities', [DashboardController::class, 'activities'])->name('activities');
+Route::get('/timed', [DashboardController::class, 'timed'])->name('timed');
+Route::get('/overal', [DashboardController::class, 'overal'])->name('overal');
+
 
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 
@@ -24,4 +31,6 @@ Route::post('/register', [RegisterController::class, 'register']);
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 Route::get('/dashboard/upload', 'DashboardController@uploadForm')->name('upload.form');
 Route::post('/dashboard/upload', 'DashboardController@upload')->name('upload.submit');
+
+Route::get('/attendance', [DashboardController::class, 'showAttendanceForm'])->name('attendance');
 

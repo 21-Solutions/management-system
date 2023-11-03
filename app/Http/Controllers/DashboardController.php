@@ -19,6 +19,38 @@ class DashboardController extends Controller
         return view('dashboard.upload');
     }
 
+    public function activities(){
+        return view('website.student.activities');
+    }
+
+    public function attendance(){
+        return view('website.student.attendance');
+    }
+
+    public function overal(){
+        return view('website.student.overal');
+    }
+
+    public function subjects(){
+        return view('website.student.subjects');
+    }
+
+    public function timed(){
+        return view('website.student.timed');
+    }
+
+    public function timetable(){
+        return view('website.student.timetable');
+    }
+
+    public function showAttendanceForm()
+    {
+        $students = Student::all();
+
+        return view('website.student.attendance', compact('students'));
+    }
+
+
     public function upload(Request $request)
     {
         if ($request->hasFile('file')) {
