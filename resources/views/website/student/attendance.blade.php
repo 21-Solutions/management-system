@@ -32,8 +32,8 @@
         }
 
         function getAttendanceStatus(date) {
-            // Here you can implement the logic to determine the attendance status based on the selected date.
-            // You can retrieve the attendance status from the database or any other source.
+            // Here you  implement the logic to determine the attendance status based on the selected date.
+            //  can retrieve the attendance status from the database or any other source.
 
             // For demonstration purposes, let's assume the attendance status is stored in an array.
             var attendanceStatuses = {

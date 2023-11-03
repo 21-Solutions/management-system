@@ -1,6 +1,13 @@
+
 @extends('website.layouts.tutor')
 
 @section('content')
-    <h1>Welcome to the Dashboard</h1>
-    <p>hey there</p>
+
+
+        <h2>Subjects</h2>
+
+        <p>This should be generated when someone registers subjects</p>
+
 @endsection
+
+
