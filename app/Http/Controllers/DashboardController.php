@@ -9,9 +9,13 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        $students = Student::all();
 
-        return view('dashboard.index', compact('students'));
+
+        return view('dashboard.index');
+    }
+
+    public function dashboard(){
+        return view('website.student.dashboard');
     }
 
     public function uploadForm()
@@ -45,9 +49,9 @@ class DashboardController extends Controller
 
     public function showAttendanceForm()
     {
-        $students = Student::all();
 
-        return view('website.student.attendance', compact('students'));
+
+        return view('website.student.attendance');
     }
 
 

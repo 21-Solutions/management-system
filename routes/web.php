@@ -17,6 +17,8 @@ Route::get('/subjects', [DashboardController::class, 'subjects'])->name('subject
 Route::get('/activities', [DashboardController::class, 'activities'])->name('activities');
 Route::get('/timed', [DashboardController::class, 'timed'])->name('timed');
 Route::get('/overal', [DashboardController::class, 'overal'])->name('overal');
+Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
+
 
 
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
